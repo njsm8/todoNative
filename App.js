@@ -1,18 +1,18 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import Login from "./Login";
-import { auth } from "./firebaseConfig";
-import { UserContext } from "./stateProvider";
+import Login from "./components/Authentication/Login";
+import { auth } from "./config/firebaseConfig";
+import { UserContext } from "./config/stateProvider";
 import { NavigationContainer, StackActions } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import Home from "./Home";
+import Home from "./components/Home/Home";
 import { ScreenStackHeaderLeftView } from "react-native-screens";
-import SignUp from "./SignUp";
-import Todo from "./Todo";
-import TodoItem from "./TodoItem";
-import TodoInput from "./Todo";
+import SignUp from "./components/Authentication/SignUp";
+import Todo from "./components/Todo/Todo";
+import TodoItem from "./components/Todo/TodoItem";
+import TodoInput from "./components/Todo/Todo";
 
 export default function App() {
   const [user, setUser] = useState();
